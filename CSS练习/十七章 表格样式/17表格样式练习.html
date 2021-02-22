@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>表格样式</title>
+        <style type="text/css">
+            table,tr,td,th{border: 1px solid blue;}
+            caption{caption-side: bottom;font-weight: bolder;}
+            table{border-spacing: 50px;border-collapse: collapse;}
+        </style>
+    </head>
+    <table>
+        <caption>学生信息表</caption>
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>小明</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>小华</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>小美</td>
+                <td>女</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>合计人数</td>
+                <td colspan="2">3</td>
+            </tr>
+        </tfoot>
+    </table>
+</html>

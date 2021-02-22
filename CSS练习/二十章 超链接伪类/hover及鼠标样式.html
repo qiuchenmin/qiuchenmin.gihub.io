@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>hover及鼠标样式使用</title>
+        <style type="text/css">
+            #div1,#div2{width: 150px;
+                height: 20px;
+                font-size: 10px;}
+            #div1:hover{background-color: #28f1f1;}
+            #div2:hover{background-color: pink;}
+            img:hover{border: 1px solid red;}
+            /*鼠标样式设定*/
+            #one{cursor: default;}
+            #two{cursor: pointer;}
+            /*自定义鼠标样式*/
+            #three{cursor: url(img/default.cur),default;}
+            #four{cursor: url(img/pointer.cur),pointer;}
+            #six{cursor: url("img/leaf.png"),text;}
+        </style>
+    </head>
+    <body>
+        <div id="div1">测试鼠标悬停数据一</div>
+        <hr/>
+        <div id="div2">测试鼠标悬停数据二</div>
+        <hr/>
+        <div id="div3">
+            <img src="img/girl.gif" alt="花木兰" title="花木兰"/>
+        </div>
+        <hr/>
+        <div id="div4">
+            <p id="one">默认鼠标</p>
+            <p id="two">手状鼠标</p>
+        </div>
+        <hr/>
+        <div id="div5">
+            <p id="three">自定义鼠标样式一</p>
+            <p id="four">自定义鼠标样式二</p>
+            <p id="six">自定义鼠标样式三</p>
+        </div>
+
+    </body>
+</html>
