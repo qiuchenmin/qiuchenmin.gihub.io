@@ -22,6 +22,7 @@
                 }
             #s-top-left a:link{color: black;}
             #s-top-left a:visited{color: black;}
+            #s-top-left a:hover{color: #315efb;}
             #s-top-right{position: absolute;
                 top: 0;
                 right: 0;
@@ -77,10 +78,6 @@
                 border-radius: 10px 0 0 10px;
                 margin-right:0;
                 }
-            /*鼠标悬停文本框时，边框颜色变换*/
-            #search_border:hover{
-                border-color: #a7aab5 !important;
-            }
             #submit_botton{
                 width: 108px;
                 height: 44px;
@@ -137,6 +134,12 @@
         <script type="text/javascript">
             window.onload=function () {
                 var otxt = document.getElementById("search_border");
+                otxt.onmouseover=function(){
+                    otxt.style.borderColor="#a7aab5";
+                };
+                otxt.onmouseout=function(){
+                    otxt.style.borderColor="#c4c7ce";
+                };
                 otxt.onclick=function () {
                     otxt.style.outline="none";
                     otxt.style.border="2px solid #4e6ef2";
@@ -173,7 +176,7 @@
         <div id="middle_area">
             <div id="logo_img">
                 <a href="https://www.baidu.com/s?wd=%E4%BB%8A%E6%97%A5%E6%96%B0%E9%B2%9C%E4%BA%8B&tn=SE_Pclogo_6ysd4c7a&sa=ire_dl_gh_logo&rsv_dl=igh_logo_pc" target="_blank">
-                    <img src="./BaiDuLogo.png" title="点击一下，了解更多" alt="点击一下，了解更多">
+                    <img src="img/BaiDuLogo.png" title="点击一下，了解更多" alt="点击一下，了解更多">
                 </a>
             </div>
             <div id="search">
