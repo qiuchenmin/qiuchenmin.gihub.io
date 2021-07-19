@@ -1,12 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>演示</title>
-</head>
-<body>
-    <h1>演示</h1>
-    <img src="1.jpg" width="295" height="276">
+<!DOCTYPE HTML>
+<html lang="ch">
+    <head>
+        <title>百度一下，你就知道</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            #s-top-left{position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 100;
+                height: 60px;
+                padding-left: 24px;
+                /*将父标签的字体属性设置为0.来清除a标签之间的默认留白间距*/
+                font-size: 0;
+                }
+            #s-top-left a{margin: 19px 31px 0 0;
+                font: 13px/23px Arial,sans-serif;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                top:0;
+                }
+            #s-top-left a:link{color: black;}
+            #s-top-left a:visited{color: black;}
+            #s-top-right{position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 100;
+                height: 60px;
+                padding-right: 24px}
+            #s-top-right span{
+                margin: 19px 31px 0 0;
+                font: 13px/23px Arial,sans-serif;
+                text-decoration: none;
+                padding-bottom: 19px;
+                position: relative;
+                top:11px;
+            }
+            #s-top-right ul{list-style-type: none;
+                border: 2px dashed darkgrey;
+            /*margin: 0;*/
+            /*padding: 0;*/
+            }
+            #s-top-right>span>ul{
+                position: absolute;
+                /*min-width: 200%;*/
+                width: 200%;
+                top: 100%;
+                right: 0;
+                background-color: white;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 600ms;}
+            #s-top-right>span:hover>ul{
+                	max-height: 120px;
+                    opacity: 1;
+            }
+            #s-top-right>span li:hover{
+                color: #4e6ef2;
+            }
+            #middle_area{
+                width: 654px;
+                height: 314px;
+                margin-top: 0;
+                margin-right: auto;
+                margin-bottom: 0;
+                margin-left: auto;
+            }
+            /*#search{text-align: center;}*/
+            #search_border{width: 480px;
+                height: 16px;
+                padding: 12px 48px 12px 16px;
+                /*box-shadow: none;*/
+                background-color: white;
+                border: 2px solid #c4c7ce;
+                border-radius: 10px 0 0 10px;
+                margin-right:0;
+                }
+            /*鼠标悬停文本框时，边框颜色变换*/
+            #search_border:hover{
+                border-color: #a7aab5 !important;
+            }
+            #submit_botton{
+                width: 108px;
+                height: 44px;
+                background-color: #4e6ef2;
+                color: white;
+                font-size: 17px;
+                font-weight: 400;
+                border: none;
+                line-height: 45px;
+                /*  倒角  */
+                border-radius: 0 10px 10px 0;
+                margin-left: 0;
+                position: relative;
+                left: 547px;
+                bottom: 44px;
+            }
+            #submit_botton:hover{
+                cursor: pointer;
+                background-color: #4662d9;
+            }
+            #logo_img{
+                width: 654px;
+                height: 185px;
+                text-align: center;
+                margin-top: 86px;}
+            .clear{clear: both;}
+            img{ width: 270px;
+                height: 129px;
+                margin: 33px auto 0 auto;
+                }
+            #foot{position: fixed;
+                left: 0;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                height: 39px;
+                line-height: 39px;
+                zoom: 1;
+            }
+            #foot a{color: #BBBBBB;
+                font-size: 12px;
+                text-decoration: none;
+                font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+                margin-right: 24px;
+                }
+            #foot a:hover{color: black;
+                cursor: pointer;}
+            #foot span{color: #BBBBBB;
+                font-size: 12px;
+                font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+                margin-right: 24px;
+                }
+        </style>
+        <script type="text/javascript">
+            window.onload=function () {
+                var otxt = document.getElementById("search_border");
+                otxt.onclick=function () {
+                    otxt.style.outline="none";
+                    otxt.style.border="2px solid #4e6ef2";
+                };
+                otxt.onblur=function () {
+                    otxt.style.border="2px solid #c4c7ce";
+                }
 
-</body>
+            }
+        </script>
+    </head>
+    <body>
+        <div id="s-top-left">
+            <a href="http://news.baidu.com" target="_blank">新闻</a>
+            <a href="https://www.hao123.com" target="_blank">hao123</a>
+            <a href="http://map.baidu.com" target="_blank">地图</a>
+            <a href="https://live.baidu.com/" target="_blank">直播</a>
+            <a href="https://haokan.baidu.com/?sfrom=baidu-top" target="_blank">视频</a>
+            <a href="http://tieba.baidu.com" target="_blank">贴吧</a>
+            <a href="http://xueshu.baidu.com" target="_blank">学术</a>
+            <a href="http://www.baidu.com/more/" target="_blank">更多</a>
+        </div>
+        <div id="s-top-right">
+            <span>设置
+                <ul>
+                    <li>搜索设置</li>
+                    <li>高级搜索</li>
+                    <li>关闭预测</li>
+                    <li>隐私设置</li>
+                    <li>开启热榜</li>
+                </ul>
+            </span>
+        </div>
+        <div id="middle_area">
+            <div id="logo_img">
+                <a href="https://www.baidu.com/s?wd=%E4%BB%8A%E6%97%A5%E6%96%B0%E9%B2%9C%E4%BA%8B&tn=SE_Pclogo_6ysd4c7a&sa=ire_dl_gh_logo&rsv_dl=igh_logo_pc" target="_blank">
+                    <img src="img/BaiDuLogo.png" title="点击一下，了解更多" alt="点击一下，了解更多">
+                </a>
+            </div>
+            <div id="search">
+                <form id="form_1">
+                    <label><input id="search_border" type="text" style="outline: none"></label>
+                    <label><input id="submit_botton" type="submit" value="百度一下"></label>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+        <div id="foot">
+            <a href="//www.baidu.com/cache/setindex/index.html" target="_blank">设为首页</a>
+            <a href="//home.baidu.com">关于百度</a>
+            <a href="http://ir.baidu.com">About Baidu</a>
+            <a href="//www.baidu.com/duty">使用百度前必读</a>
+            <a href="//help.baidu.com/newadd?prod_id=1&category=4">意见反馈</a>
+            <a href="//help.baidu.com">帮助中心</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">京公网安备11000002000001号</a>
+            <a href="https://beian.miit.gov.cn">京ICP证030173号</a>
+            <span>©2021 Baidu</span>
+            <span>(京)-经营性-2017-0020</span>
+            <span>信息网络传播视听节目许可证 0110516</span>
+        </div>
+    </body>
 </html>
